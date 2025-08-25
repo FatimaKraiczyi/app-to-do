@@ -3,58 +3,61 @@ import theme from '../../theme';
 
 export const styles = StyleSheet.create({
   container: {
-    ...theme.components.screen,
-  },
-  topSection: {
     flex: 1,
+    backgroundColor: theme.layout.colors.background,
+  },
+
+  contentWrapper: {
+    flex: 1,
+    paddingHorizontal: theme.layout.spacing.screenHorizontal,
     justifyContent: 'center',
-    alignItems: 'center',
   },
-  bottomSection: {
-    paddingHorizontal: theme.spacing.lg,
-    paddingBottom: theme.spacing.lg,
+
+  // Header Section - Logo + Textos
+  headerSection: {
+    ...theme.layout.content.headerSection,
   },
+
   logoContainer: {
     alignItems: 'center',
-    marginBottom: theme.spacing.xxxl,
-  },
-  logoMainImage: {
-    width: 96,
-    height: 82,
-    marginBottom: theme.spacing.md,
-  },
-  input: {
-    marginBottom: theme.spacing.md,
-  },
-  button: {
-    marginTop: theme.spacing.sm,
-  },
-  content: {
-    flexGrow: 1,
-  },
-  logoSection: {
-    alignItems: 'center',
-    gap: theme.spacing.xxxl,
   },
 
-  logoPlaceholder: {
+  logoImage: {
     width: 113,
     height: 113,
-    backgroundColor: theme.colors.primary,
-    borderRadius: theme.borderRadius.lg,
   },
 
-  titleSection: {
-    alignItems: 'center',
-    gap: theme.spacing.xs,
+  textSection: {
+    ...theme.layout.content.textSection,
   },
 
   title: {
-    ...theme.textStyles.title,
+    ...theme.layout.typography.title,
   },
 
   subtitle: {
-    ...theme.textStyles.subtitle,
+    ...theme.layout.typography.subtitle,
   },
 
+  // Form Section
+  formSection: {
+    ...theme.layout.content.formSection,
+  },
+
+  inputContainer: {
+    ...theme.layout.content.inputContainer,
+  },
+
+  // Footer Section
+  footerSection: {
+    ...theme.layout.content.footerSection,
+  },
+
+  footerText: {
+    ...theme.layout.typography.body,
+  },
+
+  linkText: {
+    ...theme.layout.button.linkText,
+  },
 });

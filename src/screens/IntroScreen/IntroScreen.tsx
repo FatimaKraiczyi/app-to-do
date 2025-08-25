@@ -4,8 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from './IntroScreen.styles';
 import Button from '../../components/Button';
-import { IntroScreenNavigationProp } from '../../types/navigation';
-import { theme } from '../../theme';
+import type { IntroScreenNavigationProp } from '../../types/navigation';
 
 const IntroScreen: React.FC = () => {
   const navigation = useNavigation<IntroScreenNavigationProp>();
@@ -20,39 +19,37 @@ const IntroScreen: React.FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.topSection}>
-        <View style={styles.logoContainer}>
-          <Image
-            source={require('../../assets/logo/logo.png')}
-            style={styles.logoMainImage}
-            resizeMode="contain"
-          />
+      <View style={styles.contentWrapper}>
+        {/* Header Section - Logo + Textos */}
+        <View style={styles.headerSection}>
+          <View style={styles.logoContainer}>
+            <Image
+              source={require('../../assets/logo/logo.png')}
+              style={styles.logoImage}
+              resizeMode="contain"
+            />
+          </View>
+
+          <View style={styles.textSection}>
+            <Text style={styles.title}>Welcome to UpTodo</Text>
+            <Text style={styles.subtitle}>
+              Please login to your account or create new account to continue
+            </Text>
+          </View>
         </View>
 
-        <Text style={styles.titleText}>Welcome to UpTodo</Text>
+        {/* Buttons Section */}
+        <View style={styles.buttonSection}>
+          <Button variant="contained" onPress={handleLogin}>
+            LOGIN
+          </Button>
 
-        <Text style={styles.subtitleText}>
-          Please login to your account or create new account to continue
-        </Text>
-      </View>
+          <Button variant="outlined" onPress={handleCreateAccount}>
+            Create account
+          </Button>
+        </View>
 
-      <View style={styles.bottomSection}>
-        <Button
-          variant="contained"
-          onPress={handleLogin}
-          style={{ marginBottom: theme.spacing.lg }}
-        >
-          LOGIN
-        </Button>
-
-        <Button
-          variant="outlined"
-          onPress={handleCreateAccount}
-          style={{ marginBottom: theme.spacing.xxxl }}
-        >
-          Create account
-        </Button>
-
+        {/* Bottom Indicator */}
         <View style={styles.bottomIndicatorContainer}>
           <View style={styles.bottomIndicator} />
         </View>

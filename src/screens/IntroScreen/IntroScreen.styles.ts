@@ -3,88 +3,60 @@ import theme from '../../theme';
 
 export const styles = StyleSheet.create({
   container: {
-    ...theme.components.screen,
+    flex: 1,
+    backgroundColor: theme.layout.colors.background,
   },
-  topSection: {
+
+  contentWrapper: {
+    flex: 1,
+    paddingHorizontal: theme.layout.spacing.screenHorizontal,
+    justifyContent: 'space-between',
+    paddingVertical: theme.spacing.xxxl,
+  },
+
+  // Header Section - Logo + Textos
+  headerSection: {
+    ...theme.layout.content.headerSection,
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
   },
-  bottomSection: {
-    paddingHorizontal: theme.spacing.lg,
-    paddingBottom: theme.spacing.lg,
-  },
+
   logoContainer: {
     alignItems: 'center',
-    marginBottom: theme.spacing.xxxl,
   },
-  logoMainImage: {
-    width: 96,
-    height: 82,
-    marginBottom: theme.spacing.md,
+
+  logoImage: {
+    width: 113,
+    height: 113,
   },
-  logoPlaceholder: {
-    width: 96,
-    height: 82,
-    backgroundColor: theme.colors.primary,
-    borderRadius: theme.borderRadius.md,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: theme.spacing.md,
+
+  textSection: {
+    ...theme.layout.content.textSection,
   },
-  logoText: {
-    color: theme.colors.white,
-    fontSize: 18,
-    fontWeight: theme.fontWeight.bold,
+
+  title: {
+    ...theme.layout.typography.title,
   },
-  titleText: {
-    color: theme.colors.text,
-    fontSize: theme.fontSize.xxxl,
-    fontWeight: theme.fontWeight.bold,
-    textAlign: 'center',
-    marginBottom: theme.spacing.lg,
-    paddingHorizontal: theme.spacing.xl + theme.spacing.md,
+
+  subtitle: {
+    ...theme.layout.typography.subtitle,
   },
-  subtitleText: {
-    color: theme.colors.text,
-    fontSize: theme.fontSize.md,
-    textAlign: 'center',
-    marginBottom: theme.spacing.xl,
-    paddingHorizontal: theme.spacing.xl + theme.spacing.lg,
+
+  // Buttons Section
+  buttonSection: {
+    gap: theme.layout.spacing.input,
   },
-  loginButton: {
-    alignItems: 'center',
-    backgroundColor: theme.colors.primary,
-    borderRadius: theme.borderRadius.sm,
-    paddingVertical: theme.spacing.md,
-    marginBottom: theme.spacing.xl,
-  },
-  loginButtonText: {
-    color: theme.colors.white,
-    fontSize: theme.fontSize.md,
-    fontWeight: theme.fontWeight.medium,
-  },
-  createAccountButton: {
-    alignItems: 'center',
-    borderColor: theme.colors.primaryLight,
-    borderRadius: theme.borderRadius.sm,
-    borderWidth: 2,
-    paddingVertical: theme.spacing.md,
-    marginBottom: theme.spacing.xxxl,
-  },
-  createAccountButtonText: {
-    color: theme.colors.white,
-    fontSize: theme.fontSize.md,
-    fontWeight: theme.fontWeight.medium,
-  },
+
+  // Bottom Indicator
   bottomIndicatorContainer: {
     alignItems: 'center',
-    marginBottom: theme.spacing.sm,
+    marginTop: theme.spacing.xl,
   },
+
   bottomIndicator: {
     width: 134,
     height: 5,
-    backgroundColor: theme.colors.white,
+    backgroundColor: theme.layout.colors.white,
     borderRadius: theme.borderRadius.full,
   },
 });

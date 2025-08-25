@@ -3,63 +3,67 @@ import theme from '../../theme';
 
 export const styles = StyleSheet.create({
   container: {
-    ...theme.components.screen,
+    flex: 1,
+    backgroundColor: theme.layout.colors.background,
   },
 
-  content: {
+  scrollView: {
+    flex: 1,
+  },
+
+  scrollContent: {
     flexGrow: 1,
-    justifyContent: 'space-between',
-    paddingVertical: theme.spacing.xl,
+    paddingHorizontal: theme.layout.spacing.screenHorizontal,
+    paddingVertical: 20,
+    justifyContent: 'center',
+    minHeight: '100%',
   },
 
-  logoSection: {
+  // Header Section - Logo + Textos
+  headerSection: {
+    ...theme.layout.content.headerSection,
+  },
+
+  logoContainer: {
     alignItems: 'center',
-    gap: theme.spacing.xxxl,
   },
 
-  logoPlaceholder: {
+  logoImage: {
     width: 113,
     height: 113,
-    backgroundColor: theme.colors.primary,
-    borderRadius: theme.borderRadius.lg,
   },
 
-  titleSection: {
-    alignItems: 'center',
-    gap: theme.spacing.xs,
+  textSection: {
+    ...theme.layout.content.textSection,
   },
 
   title: {
-    ...theme.textStyles.title,
+    ...theme.layout.typography.title,
   },
 
   subtitle: {
-    ...theme.textStyles.subtitle,
+    ...theme.layout.typography.subtitle,
   },
 
+  // Form Section
   formSection: {
-    gap: theme.spacing.xl,
-    marginVertical: theme.spacing.xxxl,
+    ...theme.layout.content.formSection,
   },
 
-  signUpButton: {
-    marginTop: theme.spacing.xs,
+  inputContainer: {
+    ...theme.layout.content.inputContainer,
   },
 
+  // Footer Section
   footerSection: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: theme.spacing.xs,
+    ...theme.layout.content.footerSection,
   },
 
   footerText: {
-    ...theme.textStyles.bodyText,
+    ...theme.layout.typography.body,
   },
 
-  loginButton: {
-    alignSelf: 'auto',
-    paddingHorizontal: theme.spacing.md,
-    paddingVertical: theme.spacing.sm,
+  linkText: {
+    ...theme.layout.button.linkText,
   },
 });

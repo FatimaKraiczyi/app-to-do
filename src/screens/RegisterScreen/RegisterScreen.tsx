@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { View, Text, ScrollView , Image } from 'react-native';
+import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useNavigation } from '@react-navigation/native';
 import Input from '../../components/Input';
 import { styles } from './RegisterScreen.styles';
 import Button from '../../components/Button/Button';
+import type { LoginScreenNavigationProp } from '../../types/navigation';
 
 export default function RegisterScreen() {
+  const navigation = useNavigation<LoginScreenNavigationProp>();
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -17,21 +20,28 @@ export default function RegisterScreen() {
   };
 
   const handleLoginPress = () => {
-    console.log('Navigate to login');
-    // Navegar para tela de login
+    navigation.navigate('Login');
   };
 
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-        {/* Logo Section */}
-        <View style={styles.logoSection}>
-          <Image
-            source={require('../../assets/logo/logo.png')}
-            resizeMode="contain"
-          />
+      <ScrollView
+        style={styles.scrollView}
+        contentContainerStyle={styles.scrollContent}
+        showsVerticalScrollIndicator={false}
+        keyboardShouldPersistTaps="handled"
+      >
+        {/* Header Section - Logo + Textos */}
+        <View style={styles.headerSection}>
+          <View style={styles.logoContainer}>
+            <Image
+              source={require('../../assets/logo/logo.png')}
+              style={styles.logoImage}
+              resizeMode="contain"
+            />
+          </View>
 
-          <View style={styles.titleSection}>
+          <View style={styles.textSection}>
             <Text style={styles.title}>Nice to meet you</Text>
             <Text style={styles.subtitle}>Before we begin, we need some details.</Text>
           </View>
@@ -39,37 +49,36 @@ export default function RegisterScreen() {
 
         {/* Form Section */}
         <View style={styles.formSection}>
-          <Input
-            label="Username"
-            value={username}
-            onChangeText={setUsername}
-          />
+          <View style={styles.inputContainer}>
+            <Input
+              label="Username"
+              placeholder="Enter your Username"
+              value={username}
+              onChangeText={setUsername}
+            />
+            <Input
+              label="Email"
+              placeholder="Enter your Email"
+              value={email}
+              onChangeText={setEmail}
+            />
+            <Input
+              label="Password"
+              placeholder="Enter your Password"
+              value={password}
+              onChangeText={setPassword}
+              secureTextEntry
+            />
+            <Input
+              label="Confirm Password"
+              placeholder="Confirm your Password"
+              value={confirmPassword}
+              onChangeText={setConfirmPassword}
+              secureTextEntry
+            />
+          </View>
 
-          <Input
-            label="Email"
-            value={email}
-            onChangeText={setEmail}
-          />
-
-          <Input
-            label="Password"
-            value={password}
-            onChangeText={setPassword}
-            secureTextEntry={true}
-          />
-
-          <Input
-            label="Confirm Password"
-            value={confirmPassword}
-            onChangeText={setConfirmPassword}
-            secureTextEntry={true}
-          />
-
-          <Button
-            variant="contained"
-            onPress={handleSignUp}
-            style={styles.signUpButton}
-          >
+          <Button onPress={handleSignUp} variant="contained">
             Sign up
           </Button>
         </View>
@@ -80,7 +89,6 @@ export default function RegisterScreen() {
           <Button
             variant="text"
             onPress={handleLoginPress}
-            style={styles.loginButton}
           >
             Log in
           </Button>

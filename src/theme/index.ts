@@ -1,5 +1,6 @@
 import { colors } from './colors';
 import { spacing, borderRadius, fontSize, fontWeight, fontFamily, lineHeight } from './spacing';
+import { layout } from './layout';
 
 export const theme = {
   colors,
@@ -9,6 +10,7 @@ export const theme = {
   fontWeight,
   fontFamily,
   lineHeight,
+  layout,
 
   // Text Styles (baseado no design)
   textStyles: {
