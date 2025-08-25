@@ -43,7 +43,7 @@ export default function Input({
 
       <View style={[
         styles.inputContainer,
-        isFocused && { borderColor: theme.colors.primary },
+        isFocused && { borderColor: theme.layout.colors.primary },
       ]}>
         {secureTextEntry && value ? (
           renderPasswordDots()
@@ -53,7 +53,7 @@ export default function Input({
             value={value}
             onChangeText={onChangeText}
             placeholder={placeholder || `Enter your ${label}`}
-            placeholderTextColor={theme.colors.inputPlaceholder}
+            placeholderTextColor={theme.layout.colors.placeholder}
             secureTextEntry={secureTextEntry}
             autoCapitalize={autoCapitalize}
             keyboardType={keyboardType}

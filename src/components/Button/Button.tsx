@@ -6,7 +6,6 @@ interface ButtonProps {
   children: React.ReactNode;
   onPress: () => void;
   variant?: 'contained' | 'outlined' | 'text';
-  size?: 'sm' | 'md' | 'lg';
   disabled?: boolean;
   style?: ViewStyle;
   textStyle?: TextStyle;
@@ -16,7 +15,6 @@ export default function Button({
   children,
   onPress,
   variant = 'contained',
-  size = 'sm',
   disabled = false,
   style,
   textStyle,
@@ -24,7 +22,6 @@ export default function Button({
   const containerStyle = [
     styles.baseContainer,
     styles[`${variant}Container`],
-    styles[`${size}Container`],
     disabled && styles.disabledContainer,
     disabled && variant === 'text' && styles.disabledTextContainer,
     style,
@@ -33,7 +30,6 @@ export default function Button({
   const textStyles = [
     styles.baseText,
     styles[`${variant}Text`],
-    styles[`${size}Text`],
     disabled && styles.disabledText,
     textStyle,
   ];

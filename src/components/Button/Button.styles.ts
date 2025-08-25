@@ -43,38 +43,6 @@ export const styles = StyleSheet.create({
     color: theme.layout.colors.primary,
   },
 
-  // Size styles - Container
-  smContainer: {
-    paddingHorizontal: theme.layout.spacing.inputPadding,
-    paddingVertical: theme.layout.spacing.inputPadding,
-  },
-
-  mdContainer: {
-    paddingHorizontal: theme.layout.spacing.buttonHorizontal,
-    paddingVertical: theme.layout.spacing.buttonHorizontal,
-  },
-
-  lgContainer: {
-    paddingHorizontal: theme.layout.spacing.buttonHorizontal,
-    paddingVertical: theme.layout.spacing.buttonVertical,
-  },
-
-  // Size styles - Text
-  smText: {
-    fontSize: 14,
-    lineHeight: 16,
-  },
-
-  mdText: {
-    fontSize: 16,
-    lineHeight: 18,
-  },
-
-  lgText: {
-    fontSize: 20,
-    lineHeight: 20,
-  },
-
   // Disabled styles
   disabledContainer: {
     backgroundColor: theme.layout.colors.placeholder,

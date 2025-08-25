@@ -63,8 +63,4 @@ export const styles = StyleSheet.create({
   footerText: {
     ...theme.layout.typography.body,
   },
-
-  linkText: {
-    ...theme.layout.button.linkText,
-  },
 });
