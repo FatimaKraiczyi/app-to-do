@@ -22,9 +22,23 @@ export const styles = StyleSheet.create({
     marginBottom: theme.spacing.xxxl,
   },
   logoMainImage: {
-    width: 113,
-    height: 113,
+    width: 96,
+    height: 82,
     marginBottom: theme.spacing.md,
+  },
+  logoPlaceholder: {
+    width: 96,
+    height: 82,
+    backgroundColor: theme.colors.primary,
+    borderRadius: theme.borderRadius.md,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: theme.spacing.md,
+  },
+  logoText: {
+    color: theme.colors.white,
+    fontSize: 18,
+    fontWeight: theme.fontWeight.bold,
   },
   titleText: {
     color: theme.colors.text,

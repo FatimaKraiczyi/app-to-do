@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import { View, Text, ScrollView , Image} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
@@ -26,8 +26,11 @@ export default function RegisterScreen() {
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         {/* Logo Section */}
         <View style={styles.logoSection}>
-          {/* Aqui você pode adicionar o logo/ícone */}
-          <View style={styles.logoPlaceholder} />
+          <Image
+                      source={require('../../assets/logo/logo.png')}
+                       resizeMode="contain"
+                    />
+      
           
           <View style={styles.titleSection}>
             <Text style={styles.title}>Nice to meet you</Text>
