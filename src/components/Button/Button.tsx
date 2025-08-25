@@ -31,7 +31,6 @@ export default function Button({
   ];
 
   const textStyles = [
-    styles.baseText,
     styles[`${variant}Text`],
     styles[`${size}Text`],
     disabled && styles.disabledText,
