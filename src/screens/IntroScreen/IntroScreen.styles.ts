@@ -10,15 +10,13 @@ export const styles = StyleSheet.create({
   contentWrapper: {
     flex: 1,
     paddingHorizontal: theme.layout.spacing.screenHorizontal,
-    justifyContent: 'space-between',
-    paddingVertical: theme.spacing.xxxl,
+    justifyContent: 'center',
+    gap: theme.layout.spacing.section,
   },
 
   // Header Section - Logo + Textos
   headerSection: {
     ...theme.layout.content.headerSection,
-    flex: 1,
-    justifyContent: 'center',
   },
 
   logoContainer: {
@@ -42,21 +40,20 @@ export const styles = StyleSheet.create({
     ...theme.layout.typography.subtitle,
   },
 
-  // Buttons Section
+  // Buttons Section - usando padrão do layout
   buttonSection: {
-    gap: theme.layout.spacing.input,
+    ...theme.layout.content.formSection,
   },
 
-  // Bottom Indicator
+  // Bottom Indicator - usando padrão do layout
   bottomIndicatorContainer: {
     alignItems: 'center',
-    marginTop: theme.spacing.xl,
   },
 
   bottomIndicator: {
     width: 134,
     height: 5,
     backgroundColor: theme.layout.colors.white,
-    borderRadius: theme.borderRadius.full,
+    borderRadius: 100,
   },
 });

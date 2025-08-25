@@ -2,89 +2,90 @@ import { StyleSheet } from 'react-native';
 import theme from '../../theme';
 
 export const styles = StyleSheet.create({
-  // Base styles
+  // Base styles usando layout.ts
   baseContainer: {
-    alignSelf: 'stretch',
-    alignItems: 'center',
-    justifyContent: 'center',
-    ...theme.components.button,
+    ...theme.layout.button.primary,
   },
 
   baseText: {
-    ...theme.textStyles.buttonText,
+    ...theme.layout.button.primaryText,
   },
 
   // Variant styles - Container
   containedContainer: {
-    backgroundColor: theme.colors.primary,
+    backgroundColor: theme.layout.colors.primary,
   },
 
   outlinedContainer: {
     backgroundColor: 'transparent',
     borderWidth: 2,
-    borderColor: theme.colors.primary,
+    borderColor: theme.layout.colors.primary,
   },
 
   textContainer: {
     backgroundColor: 'transparent',
     borderWidth: 0,
+    shadowColor: 'transparent',
+    shadowOffset: { width: 0, height: 0 },
+    shadowRadius: 0,
   },
 
   // Variant styles - Text
   containedText: {
-    color: theme.colors.white,
+    color: theme.layout.colors.white,
   },
 
   outlinedText: {
-    color: theme.colors.white,
+    color: theme.layout.colors.white,
   },
 
   textText: {
-    color: theme.colors.primary,
+    color: theme.layout.colors.primary,
   },
 
   // Size styles - Container
   smContainer: {
-    paddingHorizontal: theme.spacing.md,
-    paddingVertical: theme.spacing.md,
+    paddingHorizontal: theme.layout.spacing.inputPadding,
+    paddingVertical: theme.layout.spacing.inputPadding,
   },
 
   mdContainer: {
-    paddingHorizontal: theme.spacing.lg,
-    paddingVertical: theme.spacing.lg,
+    paddingHorizontal: theme.layout.spacing.buttonHorizontal,
+    paddingVertical: theme.layout.spacing.buttonHorizontal,
   },
 
   lgContainer: {
-    paddingHorizontal: theme.spacing.lg,
-    paddingVertical: theme.spacing.xl,
+    paddingHorizontal: theme.layout.spacing.buttonHorizontal,
+    paddingVertical: theme.layout.spacing.buttonVertical,
   },
 
   // Size styles - Text
   smText: {
-    fontSize: theme.fontSize.sm,
+    fontSize: 14,
     lineHeight: 16,
   },
 
   mdText: {
-    fontSize: theme.fontSize.md,
+    fontSize: 16,
     lineHeight: 18,
   },
 
   lgText: {
-    fontSize: theme.fontSize.xl,
-    lineHeight: theme.lineHeight.sm,
+    fontSize: 20,
+    lineHeight: 20,
   },
 
   // Disabled styles
   disabledContainer: {
-    backgroundColor: theme.colors.textMuted,
-    borderColor: theme.colors.textMuted,
-    shadowOpacity: 0,
-    elevation: 0,
+    backgroundColor: theme.layout.colors.placeholder,
+    borderColor: theme.layout.colors.placeholder,
+    shadowColor: 'transparent',
+    shadowOffset: { width: 0, height: 0 },
+    shadowRadius: 0,
   },
 
   disabledText: {
-    color: theme.colors.textSecondary,
+    color: theme.layout.colors.textSecondary,
   },
 
   // Disabled text variant - override background for text buttons

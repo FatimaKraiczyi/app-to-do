@@ -12,7 +12,7 @@ export default function LoginScreen() {
   const [password, setPassword] = React.useState('');
 
   const handleLogin = () => {
-    console.log('Login attempt:', { username, password });
+    console.log('Tentativa de login:', { username, password });
     // Implementar lógica de autenticação
   };
 
@@ -23,7 +23,7 @@ export default function LoginScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.contentWrapper}>
-        {/* Header Section - Logo + Textos */}
+        {/* Seção do Cabeçalho - Logo + Textos */}
         <View style={styles.headerSection}>
           <View style={styles.logoContainer}>
             <Image
@@ -34,23 +34,23 @@ export default function LoginScreen() {
           </View>
 
           <View style={styles.textSection}>
-            <Text style={styles.title}>Welcome back</Text>
-            <Text style={styles.subtitle}>Welcome back! Please enter your details.</Text>
+            <Text style={styles.title}>Bem-vindo de volta!</Text>
+            <Text style={styles.subtitle}>Insira seus dados.</Text>
           </View>
         </View>
 
-        {/* Form Section */}
+        {/* Seção do Formulário */}
         <View style={styles.formSection}>
           <View style={styles.inputContainer}>
             <Input
-              label="Username"
-              placeholder="Enter your Username"
+              label="E-mail"
+              placeholder="Digite seu e-mail"
               value={username}
               onChangeText={setUsername}
             />
             <Input
-              label="Password"
-              placeholder="Enter your Password"
+              label="Senha"
+              placeholder="Digite sua senha"
               value={password}
               onChangeText={setPassword}
               secureTextEntry
@@ -58,19 +58,19 @@ export default function LoginScreen() {
           </View>
 
           <Button onPress={handleLogin} variant="contained">
-            Login
+            Entrar
           </Button>
         </View>
 
-        {/* Footer Section */}
+        {/* Seção do Rodapé */}
         <View style={styles.footerSection}>
-          <Text style={styles.footerText}>Don't have an account yet?</Text>
+          <Text style={styles.footerText}>Ainda não tem uma conta?</Text>
 
           <Button
             variant="text"
             onPress={handleSignUpPress}
           >
-            Sign up
+            Cadastre-se
           </Button>
         </View>
       </View>

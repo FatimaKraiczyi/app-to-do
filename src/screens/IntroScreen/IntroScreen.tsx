@@ -20,7 +20,7 @@ const IntroScreen: React.FC = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.contentWrapper}>
-        {/* Header Section - Logo + Textos */}
+        {/* Seção do Cabeçalho - Logo + Textos */}
         <View style={styles.headerSection}>
           <View style={styles.logoContainer}>
             <Image
@@ -31,25 +31,25 @@ const IntroScreen: React.FC = () => {
           </View>
 
           <View style={styles.textSection}>
-            <Text style={styles.title}>Welcome to UpTodo</Text>
+            <Text style={styles.title}>Bem-vindo ao UpTodo</Text>
             <Text style={styles.subtitle}>
-              Please login to your account or create new account to continue
+              Faça login na sua conta ou crie uma nova conta para continuar
             </Text>
           </View>
         </View>
 
-        {/* Buttons Section */}
+        {/* Seção dos Botões */}
         <View style={styles.buttonSection}>
           <Button variant="contained" onPress={handleLogin}>
-            LOGIN
+            ENTRAR
           </Button>
 
           <Button variant="outlined" onPress={handleCreateAccount}>
-            Create account
+            Criar conta
           </Button>
         </View>
 
-        {/* Bottom Indicator */}
+        {/* Indicador Inferior */}
         <View style={styles.bottomIndicatorContainer}>
           <View style={styles.bottomIndicator} />
         </View>

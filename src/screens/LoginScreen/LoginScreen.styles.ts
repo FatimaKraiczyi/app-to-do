@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: theme.layout.spacing.screenHorizontal,
     justifyContent: 'center',
+    gap: theme.layout.spacing.section,
   },
 
   // Header Section - Logo + Textos

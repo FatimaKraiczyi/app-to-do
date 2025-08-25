@@ -3,45 +3,34 @@ import theme from '../../theme';
 
 export const styles = StyleSheet.create({
   container: {
-    position: 'relative',
-    alignSelf: 'stretch',
-    height: 80,
+    ...theme.layout.input.fieldContainer,
   },
 
   label: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    ...theme.textStyles.inputLabel,
+    ...theme.layout.input.label,
   },
 
   inputContainer: {
-    position: 'absolute',
-    top: 32,
-    left: 0,
-    right: 0,
-    ...theme.components.input,
-    flexDirection: 'row',
-    alignItems: 'center',
+    ...theme.layout.input.field,
   },
 
   input: {
     flex: 1,
-    ...theme.textStyles.inputPlaceholder,
-    color: theme.colors.text,
+    ...theme.layout.input.placeholder,
+    color: theme.layout.colors.white,
     padding: 0, // Remove padding padrão do TextInput
   },
 
   passwordDots: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
+    gap: theme.layout.spacing.inputField,
   },
 
   dot: {
     width: 6,
     height: 6,
     borderRadius: 3,
-    backgroundColor: theme.colors.inputPlaceholder,
+    backgroundColor: theme.layout.colors.placeholder,
   },
 });

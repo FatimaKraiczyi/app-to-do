@@ -14,8 +14,9 @@ export const styles = StyleSheet.create({
   scrollContent: {
     flexGrow: 1,
     paddingHorizontal: theme.layout.spacing.screenHorizontal,
-    paddingVertical: 20,
+    paddingVertical: theme.layout.spacing.input,
     justifyContent: 'center',
+    gap: theme.layout.spacing.section,
     minHeight: '100%',
   },
 

@@ -15,7 +15,7 @@ export default function RegisterScreen() {
   const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleSignUp = () => {
-    console.log('Sign up:', { username, email, password, confirmPassword });
+    console.log('Cadastro:', { username, email, password, confirmPassword });
     // Implementar lógica de registro
   };
 
@@ -31,7 +31,7 @@ export default function RegisterScreen() {
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled"
       >
-        {/* Header Section - Logo + Textos */}
+        {/* Seção do Cabeçalho - Logo + Textos */}
         <View style={styles.headerSection}>
           <View style={styles.logoContainer}>
             <Image
@@ -42,36 +42,36 @@ export default function RegisterScreen() {
           </View>
 
           <View style={styles.textSection}>
-            <Text style={styles.title}>Nice to meet you</Text>
-            <Text style={styles.subtitle}>Before we begin, we need some details.</Text>
+            <Text style={styles.title}>Bem vindo!</Text>
+            <Text style={styles.subtitle}>Antes de começarmos, precisamos de alguns detalhes.</Text>
           </View>
         </View>
 
-        {/* Form Section */}
+        {/* Seção do Formulário */}
         <View style={styles.formSection}>
           <View style={styles.inputContainer}>
             <Input
-              label="Username"
-              placeholder="Enter your Username"
+              label="Nome de usuário"
+              placeholder="Digite seu nome de usuário"
               value={username}
               onChangeText={setUsername}
             />
             <Input
-              label="Email"
-              placeholder="Enter your Email"
+              label="E-mail"
+              placeholder="Digite seu e-mail"
               value={email}
               onChangeText={setEmail}
             />
             <Input
-              label="Password"
-              placeholder="Enter your Password"
+              label="Senha"
+              placeholder="Digite sua senha"
               value={password}
               onChangeText={setPassword}
               secureTextEntry
             />
             <Input
-              label="Confirm Password"
-              placeholder="Confirm your Password"
+              label="Confirmar senha"
+              placeholder="Confirme sua senha"
               value={confirmPassword}
               onChangeText={setConfirmPassword}
               secureTextEntry
@@ -79,18 +79,18 @@ export default function RegisterScreen() {
           </View>
 
           <Button onPress={handleSignUp} variant="contained">
-            Sign up
+            Cadastrar
           </Button>
         </View>
 
-        {/* Footer Section */}
+        {/* Seção do Rodapé */}
         <View style={styles.footerSection}>
-          <Text style={styles.footerText}>Already have an account?</Text>
+          <Text style={styles.footerText}>Já tem uma conta?</Text>
           <Button
             variant="text"
             onPress={handleLoginPress}
           >
-            Log in
+            Entrar
           </Button>
         </View>
       </ScrollView>
