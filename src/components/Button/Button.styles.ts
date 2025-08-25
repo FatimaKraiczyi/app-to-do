@@ -7,10 +7,6 @@ export const styles = StyleSheet.create({
     ...theme.layout.button.primary,
   },
 
-  baseText: {
-    ...theme.layout.button.primaryText,
-  },
-
   // Variant styles - Container
   containedContainer: {
     backgroundColor: theme.layout.colors.primary,

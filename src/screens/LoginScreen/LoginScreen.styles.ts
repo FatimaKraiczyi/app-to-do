@@ -7,11 +7,17 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.layout.colors.background,
   },
 
-  contentWrapper: {
+  scrollView: {
     flex: 1,
+  },
+
+  scrollContent: {
+    flexGrow: 1,
     paddingHorizontal: theme.layout.spacing.screenHorizontal,
+    paddingVertical: theme.layout.spacing.input,
     justifyContent: 'center',
     gap: theme.layout.spacing.section,
+    minHeight: '100%',
   },
 
   // Header Section - Logo + Textos

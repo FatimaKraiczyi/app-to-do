@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SafeAreaView, View, Image, Text } from 'react-native';
+import { SafeAreaView, View, Image, Text, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { styles } from './LoginScreen.styles';
 import Input from '../../components/Input';
@@ -22,7 +22,12 @@ export default function LoginScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.contentWrapper}>
+      <ScrollView
+        style={styles.scrollView}
+        contentContainerStyle={styles.scrollContent}
+        showsVerticalScrollIndicator={false}
+        keyboardShouldPersistTaps="handled"
+      >
         {/* Seção do Cabeçalho - Logo + Textos */}
         <View style={styles.headerSection}>
           <View style={styles.logoContainer}>
@@ -73,7 +78,7 @@ export default function LoginScreen() {
             Cadastre-se
           </Button>
         </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }

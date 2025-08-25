@@ -49,10 +49,6 @@ const IntroScreen: React.FC = () => {
           </Button>
         </View>
 
-        {/* Indicador Inferior */}
-        <View style={styles.bottomIndicatorContainer}>
-          <View style={styles.bottomIndicator} />
-        </View>
       </View>
     </SafeAreaView>
   );
