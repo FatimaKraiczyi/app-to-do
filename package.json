@@ -11,7 +11,8 @@
     "web": "expo start --web",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "lint:check": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings 0"
+    "lint:check": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings 0",
+    "lint:watch": "eslint . --ext .js,.jsx,.ts,.tsx --fix --watch"
   },
   "dependencies": {
     "@react-navigation/native": "^7.1.17",

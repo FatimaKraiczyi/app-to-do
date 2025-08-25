@@ -8,6 +8,7 @@ interface ButtonProps {
   variant?: 'contained' | 'outlined' | 'text';
   disabled?: boolean;
   style?: ViewStyle;
+  size?: 'sm' | 'md' | 'lg';
   textStyle?: TextStyle;
 }
 
@@ -16,12 +17,14 @@ export default function Button({
   onPress,
   variant = 'contained',
   disabled = false,
+  size = 'sm',
   style,
   textStyle,
 }: ButtonProps) {
   const containerStyle = [
     styles.baseContainer,
     styles[`${variant}Container`],
+    styles[`${size}Container`],
     disabled && styles.disabledContainer,
     disabled && variant === 'text' && styles.disabledTextContainer,
     style,
@@ -30,6 +33,7 @@ export default function Button({
   const textStyles = [
     styles.baseText,
     styles[`${variant}Text`],
+    styles[`${size}Text`],
     disabled && styles.disabledText,
     textStyle,
   ];
