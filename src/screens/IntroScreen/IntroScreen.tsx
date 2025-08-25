@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Image, Text } from 'react-native';
-import { TouchableRipple, Provider as PaperProvider, DefaultTheme } from 'react-native-paper';
+import { Provider as PaperProvider, DefaultTheme } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from './IntroScreen.styles';
 import theme from '../../theme';
@@ -40,26 +40,28 @@ const IntroScreen: React.FC = () => {
             />
           </View>
 
-          <Text style={styles.titleText}>Bem vindo ao UpTodo</Text>
+          <Text style={styles.titleText}>Welcome to UpTodo</Text>
 
           <Text style={styles.subtitleText}>
-            Por favor, faça login na sua conta ou crie uma nova conta para continuar
+            Please login to your account or create new account to continue
           </Text>
         </View>
 
         <View style={styles.bottomSection}>
           <Button
+            variant="contained"
             onPress={handleLogin}
-            style={styles.loginButton}
+            style={{ marginBottom: theme.spacing.lg }}
           >
-            <Text style={styles.loginButtonText}>LOGIN</Text>
+            LOGIN
           </Button>
 
           <Button
+            variant="outlined"
             onPress={handleCreateAccount}
-            style={styles.createAccountButton}
+            style={{ marginBottom: theme.spacing.xxxl }}
           >
-            <Text style={styles.createAccountButtonText}>Criar conta</Text>
+            Create account
           </Button>
 
           <View style={styles.bottomIndicatorContainer}>
