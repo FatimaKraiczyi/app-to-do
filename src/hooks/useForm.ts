@@ -12,7 +12,7 @@ export const useForm = ({ initialValues, validate }: UseFormProps) => {
 
   const handleChange = (name: string, value: any) => {
     setValues(prev => ({ ...prev, [name]: value }));
-    
+
     // Limpar erro quando usuário começa a digitar
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
@@ -21,7 +21,7 @@ export const useForm = ({ initialValues, validate }: UseFormProps) => {
 
   const handleBlur = (name: string) => {
     setTouched(prev => ({ ...prev, [name]: true }));
-    
+
     if (validate) {
       const fieldErrors = validate(values);
       if (fieldErrors[name]) {
@@ -34,7 +34,7 @@ export const useForm = ({ initialValues, validate }: UseFormProps) => {
     if (validate) {
       const formErrors = validate(values);
       setErrors(formErrors);
-      
+
       if (Object.keys(formErrors).length === 0) {
         onSubmit(values);
       }

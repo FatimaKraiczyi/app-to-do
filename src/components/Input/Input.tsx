@@ -28,22 +28,22 @@ export default function Input({
 
   const renderPasswordDots = () => {
     if (!secureTextEntry || !value) return null;
-    
+
     const dotsCount = Math.min(value.length, 12); // Máximo 12 dots como no design
     const dots = Array.from({ length: dotsCount }, (_, index) => (
       <View key={index} style={styles.dot} />
     ));
-    
+
     return <View style={styles.passwordDots}>{dots}</View>;
   };
 
   return (
     <View style={[styles.container, style]}>
       <Text style={styles.label}>{label}</Text>
-      
+
       <View style={[
         styles.inputContainer,
-        isFocused && { borderColor: theme.colors.primary }
+        isFocused && { borderColor: theme.colors.primary },
       ]}>
         {secureTextEntry && value ? (
           renderPasswordDots()

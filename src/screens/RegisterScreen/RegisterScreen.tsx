@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, ScrollView , Image} from 'react-native';
+import { View, Text, ScrollView , Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Input from '../../components/Input';
-import Button from '../../components/Button';
- import { styles } from './RegisterScreen.styles';
+import { styles } from './RegisterScreen.styles';
+import Button from '../../components/Button/Button';
 
 export default function RegisterScreen() {
   const [username, setUsername] = useState('');
@@ -27,11 +27,10 @@ export default function RegisterScreen() {
         {/* Logo Section */}
         <View style={styles.logoSection}>
           <Image
-                      source={require('../../assets/logo/logo.png')}
-                       resizeMode="contain"
-                    />
-      
-          
+            source={require('../../assets/logo/logo.png')}
+            resizeMode="contain"
+          />
+
           <View style={styles.titleSection}>
             <Text style={styles.title}>Nice to meet you</Text>
             <Text style={styles.subtitle}>Before we begin, we need some details.</Text>
@@ -50,7 +49,7 @@ export default function RegisterScreen() {
             label="Email"
             value={email}
             onChangeText={setEmail}
-           />
+          />
 
           <Input
             label="Password"
@@ -68,7 +67,6 @@ export default function RegisterScreen() {
 
           <Button
             variant="contained"
-            size="lg"
             onPress={handleSignUp}
             style={styles.signUpButton}
           >
@@ -80,8 +78,7 @@ export default function RegisterScreen() {
         <View style={styles.footerSection}>
           <Text style={styles.footerText}>Already have an account?</Text>
           <Button
-            variant="outlined"
-            size="sm"
+            variant="text"
             onPress={handleLoginPress}
             style={styles.loginButton}
           >

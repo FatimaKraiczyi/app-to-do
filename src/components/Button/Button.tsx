@@ -5,27 +5,28 @@ import { styles } from './Button.styles';
 interface ButtonProps {
   children: React.ReactNode;
   onPress: () => void;
-  variant?: 'contained' | 'outlined';
+  variant?: 'contained' | 'outlined' | 'text';
   size?: 'sm' | 'md' | 'lg';
   disabled?: boolean;
   style?: ViewStyle;
   textStyle?: TextStyle;
 }
 
-export default function Button({ 
-  children, 
-  onPress, 
-  variant = 'contained', 
+export default function Button({
+  children,
+  onPress,
+  variant = 'contained',
   size = 'sm',
   disabled = false,
   style,
-  textStyle 
+  textStyle,
 }: ButtonProps) {
   const containerStyle = [
     styles.baseContainer,
     styles[`${variant}Container`],
     styles[`${size}Container`],
     disabled && styles.disabledContainer,
+    disabled && variant === 'text' && styles.disabledTextContainer,
     style,
   ];
 

@@ -9,7 +9,7 @@ export const theme = {
   fontWeight,
   fontFamily,
   lineHeight,
-  
+
   // Text Styles (baseado no design)
   textStyles: {
     title: {
@@ -64,7 +64,7 @@ export const theme = {
       lineHeight: lineHeight.sm, // 20px
     },
   },
-  
+
   // Component Styles
   components: {
     input: {
@@ -92,7 +92,7 @@ export const theme = {
       flex: 1,
     },
   },
-  
+
   // Common shadows
   shadows: {
     sm: {
