@@ -50,9 +50,9 @@ export const layout = {
     footerSection: {
       flexDirection: 'row' as const,
       alignItems: 'center' as const,
+      alignSelf: 'stretch' as const,
       justifyContent: 'center' as const,
       gap: 4, // espaçamento pequeno entre textos
-
     },
   },
 
@@ -85,7 +85,7 @@ export const layout = {
       top: 0,
       height: 24,
       color: 'rgba(255, 255, 255, 0.87)',
-      fontSize: 16,
+      fontSize: 14,
       fontFamily: 'Lato',
       fontWeight: '400' as const,
       lineHeight: 24.08,
@@ -94,7 +94,7 @@ export const layout = {
     // Placeholder text
     placeholder: {
       color: '#535353', // rgba(83, 83, 83, 1)
-      fontSize: 16,
+      fontSize: 14,
       fontFamily: 'Lato',
       fontWeight: '400' as const,
       lineHeight: 24.08,
@@ -115,15 +115,6 @@ export const layout = {
       shadowColor: 'rgba(45, 37, 55, 0.14)',
       shadowOffset: { width: 0, height: 8 },
       shadowRadius: 30,
-    },
-
-    // Texto do botão
-    primaryText: {
-      color: '#FFFFFF',
-      fontSize: 20,
-      fontFamily: 'Inter',
-      fontWeight: '600' as const,
-      lineHeight: 20,
     },
 
     // Botão de link
@@ -160,7 +151,7 @@ export const layout = {
     subtitle: {
       alignSelf: 'stretch' as const,
       color: '#E6E6E6', // rgba(230, 230, 230, 1)
-      fontSize: 17,
+      fontSize: 16,
       fontFamily: 'Inter',
       fontWeight: '400' as const,
       lineHeight: 24,
